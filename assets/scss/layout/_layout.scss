@@ -1,0 +1,6 @@
+.l-container { width: min(100% - 80px, 1200px); margin-inline: auto; }
+.l-container--narrow { width: min(100% - 80px, 1024px); margin-inline: auto; }
+.l-section { padding-block: var(--space-medium); }
+.l-section--large { padding-block: var(--space-large); }
+.l-section--small { padding-block: var(--space-small); }
+@media (max-width: 767px) { .l-container, .l-container--narrow { width: min(100% - 40px, 1200px); } }

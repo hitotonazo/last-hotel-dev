@@ -1,0 +1,7 @@
+.c-button { display: inline-flex; align-items: center; justify-content: center; gap: .7em; min-height: 44px; padding: 10px 22px; border: 1px solid transparent; font-family: var(--font-body-ja); font-size: 14px; font-weight: 500; letter-spacing: .08em; line-height: 1.3; cursor: pointer; transition: color .25s ease, border-color .25s ease, background-color .25s ease; }
+.c-button--primary { color: #171812; background: var(--color-gold); }
+.c-button--primary:hover { background: #dec99a; }
+.c-button--secondary { color: var(--color-paper); border-color: var(--color-line); background: transparent; }
+.c-button--secondary:hover { border-color: var(--color-gold); color: var(--color-gold); }
+.c-button--text { min-height: 44px; padding-inline: 0; color: var(--color-gold); border: 0; background: none; }
+.c-button--text::after { content: '→'; font-size: 1.1em; }

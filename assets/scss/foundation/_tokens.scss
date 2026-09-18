@@ -1,0 +1,18 @@
+:root {
+  --color-ink: #151713;
+  --color-charcoal: #23251f;
+  --color-forest: #19352d;
+  --color-paper: #f2f0eb;
+  --color-gold: #c8ae78;
+  --color-line: rgba(242, 240, 235, .25);
+  --font-heading-ja: 'Shippori Mincho', serif;
+  --font-en: 'Cormorant Garamond', serif;
+  --font-body-ja: 'Noto Sans JP', sans-serif;
+  --space-large: 120px;
+  --space-medium: 96px;
+  --space-small: 64px;
+}
+
+@media (max-width: 767px) {
+  :root { --space-large: 72px; --space-medium: 64px; --space-small: 48px; }
+}

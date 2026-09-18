@@ -1,0 +1,13 @@
+.gallery-intro { background: #f1efe9 url('../../images/dairiseki_bg.jpg') center / cover fixed; color: #20231e; }
+.gallery-intro__inner { display: grid; grid-template-columns: 1fr; gap: 24px; }
+.gallery-intro__lead { font-family: var(--font-heading-ja); font-size: clamp(24px, 3.2vw, 40px); line-height: 1.6; }
+.gallery-intro__text { color: #62635d; }
+.archive { background: #171914; }
+.archive__item { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: clamp(26px, 5vw, 70px); padding-block: var(--space-medium); border-top: 1px solid rgba(242, 240, 235, .2); }
+.archive__year { margin: 0; color: var(--color-gold); font-family: var(--font-en); font-size: clamp(38px, 5vw, 66px); line-height: 1; }
+.archive__figure { margin: 0; }
+.archive__figure img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: #0d0e0b; }
+.archive__caption { display: flex; justify-content: space-between; gap: 28px; padding-top: 22px; }
+.archive__caption h2 { margin-bottom: 0; font-family: var(--font-heading-ja); font-size: clamp(21px, 2.6vw, 30px); }
+.archive__caption p { max-width: 440px; margin-bottom: 0; color: rgba(242, 240, 235, .68); font-size: 14px; }
+@media (max-width: 767px) { .archive__item { grid-template-columns: 1fr; }.archive__item { gap: 22px; }.archive__caption { display: grid; gap: 10px; } }

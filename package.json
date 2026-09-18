@@ -1,0 +1,12 @@
+{
+  "name": "hotel-nestra",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass assets/scss/style.scss assets/css/style.css --no-source-map",
+    "watch": "sass --watch assets/scss/style.scss:assets/css/style.css --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

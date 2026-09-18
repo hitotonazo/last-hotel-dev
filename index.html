@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="都市の静けさと、日常の心地よさを備えたHOTEL NESTRA。短期から長期まで、さまざまな滞在に寄り添います。">
+  <title>HOTEL NESTRA</title>
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="modules/site-alteration/site-alteration.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="modules/site-alteration/site-alteration.js" defer></script>
+  <script src="modules/site-alteration/debug-panel.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header__inner l-container"><a class="site-header__logo" href="index.html"
+        aria-label="HOTEL NESTRA トップへ"><img src="images/logo-hotel-nestra.png" alt="HOTEL NESTRA"></a>
+      <nav class="site-header__nav" aria-label="メインナビゲーション"><a href="index.html">TOP</a><a
+          href="facilities.html">FACILITIES</a><a href="gallery.html">GALLERY</a></nav><button
+        class="site-header__reset" type="button" data-exploration-reset>探索リセット</button><button class="site-header__menu"
+        type="button" data-menu-toggle aria-label="メニューを開く" aria-expanded="false"><span class="site-header__menu-lines"
+          aria-hidden="true"></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" data-hero aria-label="HOTEL NESTRA メインビジュアル">
+      <div class="hero__slides">
+        <div class="hero__slide hero__slide--hotel is-active" data-hero-slide><img src="images/hero-hotel.jpg"
+            alt="夕暮れのHOTEL NESTRA外観"></div>
+        <div class="hero__slide hero__slide--room" data-hero-slide><img src="images/hero-room.jpg" alt="静かで上質なホテルの客室">
+        </div>
+        <div class="hero__slide hero__slide--lounge" data-hero-slide><img src="images/hero-lounge.jpg"
+            alt="暖かな照明に包まれたホテルラウンジ"></div>
+        <div class="hero__slide hero__slide--restaurant" data-hero-slide><img src="images/hero-restaurant.jpg"
+            alt="夜のホテルレストラン"></div>
+      </div>
+      <div class="hero__content l-container">
+        <div>
+          <h1 class="hero__eyebrow">HOTEL NESTRA</h1>
+          <p class="hero__copy">もうひとつの生活拠点を、<br class="hero__copy-break">あなたに。</p>
+        </div>
+      </div>
+      <div class="hero__controls"><button class="hero__control" type="button" data-hero-prev
+          aria-label="前のスライド">←</button>
+        <div class="hero__pagination" aria-label="スライドを選択"><button class="hero__dot" type="button" data-hero-dot
+            aria-label="スライド 1" aria-current="true"></button><button class="hero__dot" type="button" data-hero-dot
+            aria-label="スライド 2" aria-current="false"></button><button class="hero__dot" type="button" data-hero-dot
+            aria-label="スライド 3" aria-current="false"></button><button class="hero__dot" type="button" data-hero-dot
+            aria-label="スライド 4" aria-current="false"></button></div><button class="hero__control" type="button"
+          data-hero-next aria-label="次のスライド">→</button>
+      </div>
+    </section>
+    <section class="home-about l-section--large" aria-labelledby="about-title">
+      <div class="home-about__grid l-container"><img class="home-about__image" src="images/hotel-about.jpg"
+          alt="落ち着いた照明とソファを備えたHOTEL NESTRAのロビー" loading="lazy">
+        <div>
+          <div class="c-section-heading c-section-heading--dark"><span class="c-section-heading__label">About Hotel
+              Nestra</span>
+            <h2 class="c-section-heading__title" id="about-title">都市のそばに、<br>穏やかな日常を。</h2>
+          </div>
+          <div class="home-about__copy">
+            <p>街の中心にありながら、扉の先には静かな時間が流れています。HOTEL NESTRAは、旅の一夜にも、日々を重ねる滞在にも寄り添う都市型ホテルです。</p>
+            <p>仕事、休養、長い旅。目的や期間にかかわらず、いつもの暮らしの延長として心地よくお過ごしいただける空間を整えています。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="home-stay l-section--large" aria-label="客室とレストラン">
+      <div class="l-container">
+        <article class="home-stay__row">
+          <div class="home-stay__media"><img src="images/hotel-room.jpg" alt="ベッド、ワークデスク、収納を備えた客室" loading="lazy"></div>
+          <div>
+            <p class="home-stay__label">Rooms</p>
+            <h2 class="home-stay__title">休むためにも、<br>暮らすためにも。</h2>
+            <p class="home-stay__text">ゆとりあるベッド、ワークデスク、十分な収納、快適なWi-Fi環境。短いご旅行はもちろん、長期のご滞在にも自然になじむ客室です。</p>
+          </div>
+        </article>
+        <article class="home-stay__row home-stay__row--reverse">
+          <div class="home-stay__media"><img src="images/hotel-restaurant.jpg" alt="暖かな照明のホテルレストラン" loading="lazy">
+          </div>
+          <div>
+            <p class="home-stay__label">Restaurant</p>
+            <h2 class="home-stay__title">一日の始まりと終わりに、<br>心ほどける食卓を。</h2>
+            <p class="home-stay__text">朝の穏やかなひとときから、落ち着いた夜のディナーまで。季節の食材を大切にした料理を、静かな空間でお楽しみください。</p>
+          </div>
+        </article>
+        <article class="home-stay__row">
+          <div class="home-stay__media"><img src="images/hotel-lounge.jpg" alt="深いグリーンとダークブラウンで整えられたラウンジ"
+              loading="lazy"></div>
+          <div>
+            <p class="home-stay__label">Lounge</p>
+            <h2 class="home-stay__title">思い思いに過ごす、<br>滞在の余白。</h2>
+            <p class="home-stay__text">読書や休憩、仕事、待ち合わせに。ご宿泊のお客様が自由にお使いいただけるラウンジをご用意しています。</p><a
+              class="c-button c-button--text" href="facilities.html">館内施設を見る</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="long-stay l-section--large" aria-labelledby="long-stay-title">
+      <div class="long-stay__inner l-container">
+        <img class="long-stay__image" src="images/hotel-long-stay.jpg" alt="長期滞在に適したHOTEL NESTRAの客室" loading="lazy">
+        <div class="long-stay__copy"><span class="c-section-heading__label">Long Stay</span>
+          <h2 class="long-stay__title" id="long-stay-title">長期滞在プラン</h2>
+          <p class="long-stay__lead">1週間から数か月まで。<br>HOTEL NESTRAを、もうひとつの生活拠点に。</p>
+          <p class="long-stay__text">出張、療養、長期旅行など、さまざまな滞在スタイルに対応します。日々の過ごし方を保ちながら、ホテルならではの快適さをご利用いただけます。</p>
+        </div>
+      </div>
+    </section>
+    <section class="home-gallery l-section--large" aria-labelledby="gallery-title">
+      <div class="home-gallery__grid l-container"><img class="home-gallery__image" src="images/hero-man.jpg"
+          alt="HOTEL NESTRAで過ごすゲスト" loading="lazy">
+        <div class="home-gallery__copy">
+          <div class="c-section-heading"><span class="c-section-heading__label">Gallery</span>
+            <h2 class="c-section-heading__title" id="gallery-title">ホテルに重なる、<br>季節と時間の記録。</h2>
+          </div>
+          <p>館内で開催されたイベントや季節の催し、ホテルの歩みを写真でご紹介します。</p><a class="c-button c-button--text" href="gallery.html">ギャラリーを見る</a>
+        </div>
+      </div>
+    </section>
+    <section class="home-info l-section--large" aria-label="お知らせとアクセス">
+      <div class="home-info__grid l-container">
+        <section class="home-info__block">
+          <h2 class="home-info__heading">News</h2>
+          <ul class="news-list">
+            <li><time datetime="2026-09">2026.09</time><span>秋の館内装花へ切り替わりました。</span></li>
+            <li><time datetime="2026-07">2026.07</time><span>長期滞在プランのご案内を更新しました。</span></li>
+            <li><time datetime="2026-04">2026.04</time><span>ラウンジのご利用案内を掲載しました。</span></li>
+          </ul>
+        </section>
+        <section class="home-info__block">
+          <h2 class="home-info__heading">Access</h2>
+          <img class="access-image" src="images/hotel-map.jpg" alt="HOTEL NESTRA周辺の案内地図" loading="lazy">
+          <p class="access-copy">都市の主要エリアからアクセスしやすい立地にございます。詳しいアクセス方法は、ご予約時の案内をご確認ください。</p><a
+            class="c-button c-button--primary" href="facilities.html">館内のご案内</a>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__inner l-container">
+      <div class="site-footer__top"><a class="site-footer__logo" href="index.html" aria-label="HOTEL NESTRA トップへ"><img
+            src="images/logo-hotel-nestra.png" alt="HOTEL NESTRA"></a>
+        <nav class="site-footer__nav" aria-label="フッターナビゲーション"><a href="index.html">TOP</a><a
+            href="facilities.html">FACILITIES</a><a href="gallery.html">GALLERY</a></nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>©ぺいぽぴー</p>
+        <p>※このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係ありません。</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+.facilities-intro__grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(50px, 8vw, 110px); align-items: start; }
+.facilities-intro__lead { font-family: var(--font-heading-ja); font-size: clamp(25px, 3.4vw, 42px); line-height: 1.55; }
+.facilities-intro__copy { color: rgba(242, 240, 235, .72); }
+.facility-list { color: #20231e; background: #f1efe9 url('../../images/dairiseki_bg.jpg') center / cover fixed; }
+.facility-list__grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #c9c5bc; border-bottom: 1px solid #c9c5bc; }
+.facility-card { padding: 40px clamp(24px, 4vw, 48px); }
+.facility-card + .facility-card { border-left: 1px solid #c9c5bc; }
+.facility-card__image { width: 100%; margin-bottom: 26px; aspect-ratio: 4 / 3; object-fit: cover; }
+.facility-card__number { margin-bottom: 20px; color: #9b8559; font-family: var(--font-en); font-size: 14px; letter-spacing: .14em; }
+.facility-card h3 { margin-bottom: 18px; font-family: var(--font-heading-ja); font-size: 27px; }
+.facility-card p { margin-bottom: 0; color: #65665f; font-size: 15px; }
+.floor-guide { background: #d8d4cb; color: #20231e; }
+.floor-guide__frame { padding: clamp(12px, 2.5vw, 30px); border: 1px solid #bbb5aa; background: #e9e6df; }
+.floor-guide__image { width: 100%; height: auto; object-fit: contain; }
+@media (max-width: 767px) { .facilities-intro__grid, .facility-list__grid { grid-template-columns: 1fr; }.facilities-intro__grid { gap: 24px; }.facility-card { padding-inline: 0; }.facility-card + .facility-card { border-top: 1px solid #c9c5bc; border-left: 0; }.facility-card__number { margin-bottom: 18px; } }
