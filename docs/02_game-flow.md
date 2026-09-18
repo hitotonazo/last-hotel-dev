@@ -86,7 +86,7 @@ modules側に既存state構造がある場合、上記意味を既存構造へ�
 ## 表示
 
 -   `index.html`：完全な通常ホテル
--   `facilities.html`：`floor-map-normal.png`
+-   `facilities.html`：`floor-map-normal.webp`
 -   `gallery.html`：通常ギャラリー
 
 Gallery写真の031は最初から写っていてよい。これは「最初の異常」であり、別のシステム異常を先に出さない。
@@ -111,10 +111,10 @@ Gallery写真の031は最初から写っていてよい。これは「最初の�
 `index.html` のHeroは `00_project.md` / `01_pages.md`
 の最新版仕様に従い、4枚のホテル画像による通常のスライドショーとする。
 
--   `hero-hotel.jpg`
--   `hero-room.jpg`
--   `hero-lounge.jpg`
--   `hero-restaurant.jpg`
+-   `hero-hotel.webp`
+-   `hero-room.webp`
+-   `hero-lounge.webp`
+-   `hero-restaurant.webp`
 
 Heroスライドショー自体はゲーム上の異常ではない。PHASE0でノイズや不自然な画像差し替えを発生させず、031・10F・B2等の手掛かりをHeroへ追加しない。
 
@@ -188,7 +188,7 @@ areaを設定してよい。 SPでも44px以上の操作領域を確保。
 
 ## 初期表示
 
-`floor-map-normal.png`
+`floor-map-normal.webp`
 
 B1〜9Fのみ。
 
@@ -208,13 +208,13 @@ B1〜9Fのみ。
 2.  modules改変演出
 3.  `discovered10F = true`
 4.  `phase = phase2`
-5.  `floor-map-normal.png` → `floor-map-hidden.png`
+5.  `floor-map-normal.webp` → `floor-map-hidden.webp`
 6.  10F宿泊者管理情報を展開
 7.  state保存
 
 ## 改変後館内図
 
-`floor-map-hidden.png`
+`floor-map-hidden.webp`
 
 必須：
 
@@ -278,7 +278,7 @@ B1〜9Fのみ。
 
 ## 2021年記録
 
-`gallery-renovation.jpg`
+`gallery-renovation.webp`
 
 -   031なし
 -   改装工事
@@ -293,7 +293,7 @@ PHASE2後は「2021年増設」と結びついて調査対象になる。
 2.  modules改変演出
 3.  `discoveredRenovation = true`
 4.  `phase = phase3`
-5.  `facility-extension-plan.png` を展開/差し替え
+5.  `facility-extension-plan.webp` を展開/差し替え
 6.  state保存
 
 ## 工事図
@@ -312,7 +312,7 @@ PHASE2後は「2021年増設」と結びついて調査対象になる。
 
 ## 次の唯一の異常
 
-`facility-extension-plan.png` 内の赤いB2「地下増設区画」。
+`facility-extension-plan.webp` 内の赤いB2「地下増設区画」。
 
 B2をクリック可能にする。
 

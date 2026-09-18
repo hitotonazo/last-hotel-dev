@@ -519,23 +519,28 @@ h1, h2, h3 {
 .hero__slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hero__slide--hotel img {
-  object-position: 50% 50%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .hero__slide--room img {
-  object-position: 50% 50%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .hero__slide--lounge img {
-  object-position: 50% 50%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .hero__slide--restaurant img {
-  object-position: 50% 50%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .hero__content {
@@ -628,16 +633,20 @@ h1, h2, h3 {
     display: initial;
   }
   .hero__slide--hotel img {
-    object-position: 59% center;
+    -o-object-position: 59% center;
+       object-position: 59% center;
   }
   .hero__slide--room img {
-    object-position: 58% center;
+    -o-object-position: 58% center;
+       object-position: 58% center;
   }
   .hero__slide--lounge img {
-    object-position: 60% center;
+    -o-object-position: 60% center;
+       object-position: 60% center;
   }
   .hero__slide--restaurant img {
-    object-position: 57% center;
+    -o-object-position: 57% center;
+       object-position: 57% center;
   }
   .hero__controls {
     right: 20px;
@@ -668,7 +677,8 @@ h1, h2, h3 {
   min-height: 520px;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .home-about__copy {
@@ -725,7 +735,8 @@ h1, h2, h3 {
 .home-stay__media img {
   width: 100%;
   aspect-ratio: 1.45/1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .home-stay__title {
@@ -763,7 +774,8 @@ h1, h2, h3 {
 .long-stay__image {
   width: 100%;
   aspect-ratio: 16/8.5;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .long-stay__copy {
@@ -804,8 +816,10 @@ h1, h2, h3 {
 .home-gallery__image {
   width: 100%;
   aspect-ratio: 4/3;
-  object-fit: cover;
-  object-position: 50% 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
 }
 
 .home-gallery__copy p {
@@ -865,7 +879,8 @@ h1, h2, h3 {
   width: 100%;
   margin-bottom: 26px;
   aspect-ratio: 3/2;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 767px) {
@@ -945,7 +960,8 @@ h1, h2, h3 {
   width: 100%;
   margin-bottom: 26px;
   aspect-ratio: 4/3;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .facility-card__number {
@@ -982,7 +998,8 @@ h1, h2, h3 {
 .floor-guide__image {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (max-width: 767px) {
@@ -1052,7 +1069,8 @@ h1, h2, h3 {
   width: 100%;
   height: auto;
   aspect-ratio: 3/2;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   background: #0d0e0b;
 }
 
@@ -1279,8 +1297,10 @@ h1, h2, h3 {
 .guest-card__placeholder {
   width: 100%;
   aspect-ratio: 4/5;
-  object-fit: cover;
-  object-position: center top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
 }
 
 .guest-card__placeholder {
@@ -1370,8 +1390,10 @@ h1, h2, h3 {
   width: 100%;
   height: 100%;
   min-height: 340px;
-  object-fit: cover;
-  object-position: center top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
   border-right: 1px solid #4e554f;
 }
 
@@ -1425,7 +1447,8 @@ h1, h2, h3 {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0;
   pointer-events: none;
 }
@@ -1860,7 +1883,8 @@ h1, h2, h3 {
 .observation-grid img {
   width: 100%;
   aspect-ratio: 4/3;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .observation-grid figcaption {
@@ -2135,4 +2159,4 @@ h1, h2, h3 {
     transform: none;
     transition: none;
   }
-}
+}/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 .hero { position: relative; min-height: min(700px, calc(100svh - 84px)); overflow: hidden; background: #1b1c17; }.hero__slides, .hero__slide { position: absolute; inset: 0; }.hero__slide { opacity: 0; transition: opacity 1.2s ease; }.hero__slide.is-active { opacity: 1; }.hero__slide::after { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, rgba(10, 12, 10, .68), rgba(10, 12, 10, .26) 56%, rgba(10, 12, 10, .42)); }.hero__slide img { width: 100%; height: 100%; object-fit: cover; }.hero__slide--hotel img { object-position: 50% 50%; }.hero__slide--room img { object-position: 50% 50%; }.hero__slide--lounge img { object-position: 50% 50%; }.hero__slide--restaurant img { object-position: 50% 50%; }.hero__content { position: relative; z-index: 2; display: grid; align-content: center; min-height: min(700px, calc(100svh - 84px)); padding-bottom: 70px; }.hero__eyebrow { margin: 0 0 16px; font-family: var(--font-en); font-size: clamp(44px, 7vw, 92px); font-weight: 500; letter-spacing: .04em; line-height: 1.2; }.hero__copy { margin: 0; font-family: var(--font-heading-ja); font-size: clamp(22px, 3vw, 40px); font-weight: 400; line-height: 1.55; }.hero__copy-break { display: none; }.hero__controls { position: absolute; z-index: 3; right: max(40px, calc((100vw - 1200px) / 2)); bottom: 30px; display: flex; align-items: center; gap: 16px; }.hero__control { width: 44px; height: 44px; color: var(--color-paper); border: 1px solid rgba(242, 240, 235, .5); border-radius: 50%; background: rgba(0, 0, 0, .12); cursor: pointer; }.hero__pagination { display: flex; gap: 8px; }.hero__dot { width: 25px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; }.hero__dot::after { display: block; width: 100%; height: 1px; content: ''; background: rgba(242, 240, 235, .55); transition: background-color .25s ease, transform .25s ease; }.hero__dot[aria-current='true']::after { background: var(--color-gold); transform: scaleY(2); }
 @media (max-width: 767px) { .hero, .hero__content { min-height: min(650px, calc(100svh - 68px)); }.hero__content { align-content: center; padding-bottom: 100px; }.hero__copy-break { display: initial; }.hero__slide--hotel img { object-position: 59% center; }.hero__slide--room img { object-position: 58% center; }.hero__slide--lounge img { object-position: 60% center; }.hero__slide--restaurant img { object-position: 57% center; }.hero__controls { right: 20px; bottom: 20px; gap: 10px; }.hero__control { width: 42px; height: 42px; }.hero__dot { width: 18px; height: 42px; } }
 
-.home-about { background: #f1efe9 url('../../images/dairiseki_bg.jpg') center / cover fixed; }
+.home-about { background: #f1efe9 url('../../images/dairiseki_bg.webp') center / cover fixed; }
 .home-about__grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr); align-items: center; gap: clamp(48px, 7vw, 96px); }
 .home-about__image { min-height: 520px; width: 100%; height: 100%; object-fit: cover; }
 .home-about__copy { color: #61635d; }
@@ -18,7 +18,7 @@
 .home-stay__title { margin-bottom: 24px; font-family: var(--font-heading-ja); font-size: clamp(28px, 3.5vw, 44px); line-height: 1.45; }
 .home-stay__label { margin-bottom: 12px; color: var(--color-gold); font-family: var(--font-en); font-size: 16px; letter-spacing: .2em; }
 .home-stay__text { margin-bottom: 28px; color: rgba(242, 240, 235, .72); }
-.long-stay { position: relative; color: #20231e; background: #e7e1d7 url('../../images/dairiseki_bg.jpg') center / cover fixed; }
+.long-stay { position: relative; color: #20231e; background: #e7e1d7 url('../../images/dairiseki_bg.webp') center / cover fixed; }
 .long-stay__inner { display: grid; grid-template-columns: 1fr; gap: 42px; }
 .long-stay__image { width: 100%; aspect-ratio: 16 / 8.5; object-fit: cover; }
 .long-stay__copy { max-width: 760px; }
@@ -29,7 +29,7 @@
 .home-gallery__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(40px, 7vw, 88px); align-items: center; }
 .home-gallery__image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 50%; }
 .home-gallery__copy p { color: rgba(242, 240, 235, .72); }
-.home-info { background: #f1efe9 url('../../images/dairiseki_bg.jpg') center / cover fixed; color: #20231e; }
+.home-info { background: #f1efe9 url('../../images/dairiseki_bg.webp') center / cover fixed; color: #20231e; }
 .home-info__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(50px, 8vw, 110px); }
 .home-info__block + .home-info__block { border-left: 1px solid #cbc7be; padding-left: clamp(50px, 8vw, 110px); }
 .home-info__heading { margin-bottom: 26px; font-family: var(--font-en); font-size: 34px; letter-spacing: .08em; }

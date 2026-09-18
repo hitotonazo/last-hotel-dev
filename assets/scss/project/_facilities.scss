@@ -1,7 +1,7 @@
 .facilities-intro__grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(50px, 8vw, 110px); align-items: start; }
 .facilities-intro__lead { font-family: var(--font-heading-ja); font-size: clamp(25px, 3.4vw, 42px); line-height: 1.55; }
 .facilities-intro__copy { color: rgba(242, 240, 235, .72); }
-.facility-list { color: #20231e; background: #f1efe9 url('../../images/dairiseki_bg.jpg') center / cover fixed; }
+.facility-list { color: #20231e; background: #f1efe9 url('../../images/dairiseki_bg.webp') center / cover fixed; }
 .facility-list__grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #c9c5bc; border-bottom: 1px solid #c9c5bc; }
 .facility-card { padding: 40px clamp(24px, 4vw, 48px); }
 .facility-card + .facility-card { border-left: 1px solid #c9c5bc; }

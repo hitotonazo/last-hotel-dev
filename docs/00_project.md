@@ -108,8 +108,8 @@
 赤は通常ブランド色ではなく、ARGで露出した異常・増設情報・031の識別に限定する。
 
 -   031の真っ赤な服
--   `floor-map-hidden.png` の10F
--   `facility-extension-plan.png` の増設部分/B2
+-   `floor-map-hidden.webp` の10F
+-   `facility-extension-plan.webp` の増設部分/B2
 -   内部資料の警告・重要状態の限定的な強調
 
 ------------------------------------------------------------------------
@@ -218,15 +218,15 @@ SP：
 # 6-1. TOP Heroスライドショー
 
 `index.html`
-のHeroは単一画像ではなく、以下4枚を使用するスライドショーとする。この指定は旧仕様の「`hero-hotel.jpg`
+のHeroは単一画像ではなく、以下4枚を使用するスライドショーとする。この指定は旧仕様の「`hero-hotel.webp`
 1枚固定」より優先する。
 
 表示順：
 
-1.  `hero-hotel.jpg` --- ホテル外観
-2.  `hero-room.jpg` --- 客室
-3.  `hero-lounge.jpg` --- ラウンジ
-4.  `hero-restaurant.jpg` --- レストラン
+1.  `hero-hotel.webp` --- ホテル外観
+2.  `hero-room.webp` --- 客室
+3.  `hero-lounge.webp` --- ラウンジ
+4.  `hero-restaurant.webp` --- レストラン
 
 仕様：
 

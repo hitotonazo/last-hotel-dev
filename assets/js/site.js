@@ -65,7 +65,7 @@
     const floorMap = document.querySelector('[data-floor-map]');
     if (floorMap) {
       const hiddenFloor = state.discovered031;
-      floorMap.src = hiddenFloor ? 'images/floor-map-hidden.png' : 'images/floor-map-normal.png';
+      floorMap.src = hiddenFloor ? 'images/floor-map-hidden.webp' : 'images/floor-map-normal.webp';
       floorMap.alt = hiddenFloor ? '10階の特別宿泊フロアと2021年増設の業務用エレベーターを含む館内図' : '地下1階から9階までのHOTEL NESTRA館内図';
     }
     setHidden(document.querySelector('[data-discover-10f]'), !state.discovered031);
@@ -258,8 +258,16 @@
     let current = 0;
     let timer;
     const interval = 5500;
+    const loadSlide = (index) => {
+      const image = slides[index]?.querySelector('img[data-src]');
+      if (image) {
+        image.src = image.dataset.src;
+        delete image.dataset.src;
+      }
+    };
     const show = (next) => {
       current = (next + slides.length) % slides.length;
+      loadSlide(current);
       slides.forEach((slide, index) => slide.classList.toggle('is-active', index === current));
       dots.forEach((dot, index) => dot.setAttribute('aria-current', String(index === current)));
     };

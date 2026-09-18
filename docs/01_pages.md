@@ -72,7 +72,7 @@ NESTRAは普通の上質なホテル」だけ**。
 
 ## 3-3. Hero
 
-画像：`hero-hotel.jpg`
+画像：`hero-hotel.webp`
 
 方向：夕方〜夜の現代的な高級都市型ホテル外観。
 
@@ -87,7 +87,7 @@ ARGを示すコピーを追加しない。
 
 ## 3-4. About
 
-画像：`hotel-about.jpg`
+画像：`hotel-about.webp`
 
 ロビー、フロント、ソファ、間接照明。
 
@@ -95,19 +95,19 @@ ARGを示すコピーを追加しない。
 
 ## 3-5. Rooms
 
-画像：`hotel-room.jpg`
+画像：`hotel-room.webp`
 
 ベッド、デスク、収納があり長期滞在にも対応できることを自然に説明。
 
 ## 3-6. Restaurant
 
-画像：`hotel-restaurant.jpg`
+画像：`hotel-restaurant.webp`
 
 夜のホテルレストラン。自然な利用客。
 
 ## 3-7. Lounge
 
-画像：`hotel-lounge.jpg`
+画像：`hotel-lounge.webp`
 
 ブラック、ダークブラウン、深いグリーンのラウンジ。
 
@@ -153,7 +153,7 @@ PHASE1で「滞在区画：10階」を取得したプレイヤーが、ホテル
 
 ## 4-3. 通常館内図
 
-画像：`floor-map-normal.png`
+画像：`floor-map-normal.webp`
 
 必須：
 
@@ -173,7 +173,7 @@ PHASE1で031の内部情報を取得済みの場合、館内図付近に唯一�
 
 クリック後：
 
-`floor-map-normal.png` → `floor-map-hidden.png`
+`floor-map-normal.webp` → `floor-map-hidden.webp`
 
 改変版で初めて：
 
@@ -192,9 +192,9 @@ PHASE1で031の内部情報を取得済みの場合、館内図付近に唯一�
 
 実画像：
 
--   `guest-031.jpg`
--   `guest-017.jpg`
--   `guest-062.jpg`
+-   `guest-031.webp`
+-   `guest-017.webp`
+-   `guest-062.webp`
 
 全体は8名程度の管理対象が存在するように見せてよいが、追加人物画像は生成・捏造しない。残りは画像なしの管理カード、シルエット、NO
 IMAGE等で構成可。
@@ -243,11 +243,11 @@ NESTRAは、事件関与者・逃亡者・身元を捨てたい人間などを�
 
 ## 5-3. 使用画像
 
--   `gallery-2014.jpg`
--   `gallery-2017.jpg`
--   `gallery-2020.jpg`
--   `gallery-renovation.jpg`
--   `gallery-2026.jpg`
+-   `gallery-2014.webp`
+-   `gallery-2017.webp`
+-   `gallery-2020.webp`
+-   `gallery-renovation.webp`
+-   `gallery-2026.webp`
 
 031が写る各年代写真は、**場所・構図・他の客を変える**。
 同じ集合写真の差分に見せない。
@@ -284,7 +284,7 @@ PHASE1の詳細は `02_game-flow.md`。
 
 ## 5-5. 2021年改装記録
 
-画像：`gallery-renovation.jpg`
+画像：`gallery-renovation.webp`
 
 条件：
 
@@ -296,7 +296,7 @@ PHASE2で「業務用エレベーター／2021年増設」を取得するまで�
 
 取得後は2021年記録が調査対象になる。
 
-クリック後：`facility-extension-plan.png` を表示。
+クリック後：`facility-extension-plan.webp` を表示。
 
 工事図から理解させること：
 
@@ -317,11 +317,11 @@ PHASE2で「業務用エレベーター／2021年増設」を取得するまで�
 
 使用：
 
--   `underground-01.jpg`
--   `underground-02.jpg`
--   `underground-03.jpg`
--   `underground-04.jpg`
--   `underground-05.jpg`
+-   `underground-01.webp`
+-   `underground-02.webp`
+-   `underground-03.webp`
+-   `underground-04.webp`
+-   `underground-05.webp`
 
 説明文を増やしすぎない。
 

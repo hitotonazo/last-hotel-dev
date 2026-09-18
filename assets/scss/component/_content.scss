@@ -4,12 +4,12 @@
 .c-section-heading__text { max-width: 680px; margin-bottom: 0; color: rgba(242, 240, 235, .76); }
 .c-section-heading--dark .c-section-heading__title { color: #20231e; }
 .c-section-heading--dark .c-section-heading__text { color: #62635d; }
-.page-hero { position: relative; display: grid; align-items: end; min-height: 360px; overflow: hidden; background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../images/hero-hotel.jpg') center 52% / cover no-repeat; }
+.page-hero { position: relative; display: grid; align-items: end; min-height: 360px; overflow: hidden; background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../images/hero-hotel.webp') center 52% / cover no-repeat; }
 .page-hero::after { position: absolute; inset: auto 0 0; height: 1px; content: ''; background: linear-gradient(90deg, transparent, rgba(200, 174, 120, .7), transparent); }
 .page-hero__inner { position: relative; padding-block: 92px 76px; }
 .page-hero__label { margin-bottom: 12px; color: var(--color-gold); font-family: var(--font-en); font-size: 14px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
 .page-hero h1 { margin-bottom: 18px; font-family: var(--font-en); font-size: clamp(54px, 8vw, 96px); font-weight: 500; letter-spacing: .04em; line-height: .9; }
 .page-hero__lead { max-width: 620px; margin-bottom: 0; font-family: var(--font-heading-ja); font-size: clamp(18px, 2vw, 24px); letter-spacing: .06em; }
-.u-light { color: #20231e; background: #f1efe9 url('../../images/dairiseki_bg.jpg') center / cover fixed; }
+.u-light { color: #20231e; background: #f1efe9 url('../../images/dairiseki_bg.webp') center / cover fixed; }
 .u-muted { color: rgba(242, 240, 235, .72); }
 @media (max-width: 767px) { .c-section-heading { margin-bottom: 32px; }.page-hero { min-height: 300px; }.page-hero__inner { padding-block: 74px 58px; } }

@@ -23,8 +23,8 @@
 5.  必要な資料名、日付、管理番号、説明、表はHTML/CSSで重ねる。
 6.  PC/SPで重要被写体が切れないよう `object-position` を個別調整する。
 7.  Gallery各年代の031写真は「同じ写真の使い回し」に見せない。
-8.  `gallery-renovation.jpg` に031を追加しない。
-9.  `wristband.jpg` は既存確定画像をそのまま使用する。
+8.  `gallery-renovation.webp` に031を追加しない。
+9.  `wristband.webp` は既存確定画像をそのまま使用する。
 
 ------------------------------------------------------------------------
 
@@ -33,30 +33,30 @@
   ファイル                        使用箇所           役割
   ------------------------------- ------------------ ---------------------------------
   `logo-hotel-nestra.png`         Header / Footer    正式ロゴ、透過
-  `hero-hotel.jpg`                index Hero         夕方〜夜のホテル外観
-  `hotel-room.jpg`                index Rooms        長期滞在対応客室
-  `hotel-restaurant.jpg`          index Restaurant   夜のレストラン
-  `hotel-lounge.jpg`              index Lounge       黒・茶・深緑のラウンジ
-  `hotel-about.jpg`               index About        ロビー・フロント
-  `wristband.jpg`                 10F / truth        大型管理端末
-  `gallery-2014.jpg`              gallery            031最初の異常
-  `gallery-2017.jpg`              gallery            別イベントの同一031
-  `gallery-2020.jpg`              gallery            レストラン/ラウンジの同一031
-  `gallery-2026.jpg`              gallery            周年イベントの同一031
-  `gallery-renovation.jpg`        gallery            2021改装、業務用EV入口、031なし
-  `guest-031.jpg`                 facilities 10F     031内部管理写真
-  `guest-017.jpg`                 facilities 10F     特別宿泊者017
-  `guest-062.jpg`                 facilities 10F     特別宿泊者062
-  `floor-map-normal.png`          facilities         B1〜9F通常館内図
-  `floor-map-hidden.png`          facilities         赤い10F＋2021年増設EV
-  `facility-extension-plan.png`   gallery            EV地下延伸＋赤いB2増設区画
-  `underground-01.jpg`            underground        10Fから連れ出される031
-  `underground-02.jpg`            underground        バックヤード移動
-  `underground-03.jpg`            underground        業務用EVでB2へ
-  `underground-04.jpg`            underground        B2で抵抗しながら移送
-  `underground-05.jpg`            underground        処置/実験設備前で強く抵抗
-  `truth-research-01.jpg`         truth              B2研究施設内部記録
-  `truth-research-02.jpg`         truth              031経過観察記録
+  `hero-hotel.webp`                index Hero         夕方〜夜のホテル外観
+  `hotel-room.webp`                index Rooms        長期滞在対応客室
+  `hotel-restaurant.webp`          index Restaurant   夜のレストラン
+  `hotel-lounge.webp`              index Lounge       黒・茶・深緑のラウンジ
+  `hotel-about.webp`               index About        ロビー・フロント
+  `wristband.webp`                 10F / truth        大型管理端末
+  `gallery-2014.webp`              gallery            031最初の異常
+  `gallery-2017.webp`              gallery            別イベントの同一031
+  `gallery-2020.webp`              gallery            レストラン/ラウンジの同一031
+  `gallery-2026.webp`              gallery            周年イベントの同一031
+  `gallery-renovation.webp`        gallery            2021改装、業務用EV入口、031なし
+  `guest-031.webp`                 facilities 10F     031内部管理写真
+  `guest-017.webp`                 facilities 10F     特別宿泊者017
+  `guest-062.webp`                 facilities 10F     特別宿泊者062
+  `floor-map-normal.webp`          facilities         B1〜9F通常館内図
+  `floor-map-hidden.webp`          facilities         赤い10F＋2021年増設EV
+  `facility-extension-plan.webp`   gallery            EV地下延伸＋赤いB2増設区画
+  `underground-01.webp`            underground        10Fから連れ出される031
+  `underground-02.webp`            underground        バックヤード移動
+  `underground-03.webp`            underground        業務用EVでB2へ
+  `underground-04.webp`            underground        B2で抵抗しながら移送
+  `underground-05.webp`            underground        処置/実験設備前で強く抵抗
+  `truth-research-01.webp`         truth              B2研究施設内部記録
+  `truth-research-02.webp`         truth              031経過観察記録
 
 画像枚数は既に確定済み素材を基準とし、CodeX判断で新規画像を追加しない。
 
@@ -67,10 +67,10 @@
 `index.html` Heroは以下4枚を順番に使用する。
 
 ``` text
-hero-hotel.jpg
-hero-room.jpg
-hero-lounge.jpg
-hero-restaurant.jpg
+hero-hotel.webp
+hero-room.webp
+hero-lounge.webp
+hero-restaurant.webp
 ```
 
 4枚は同一ホテルの施設として視覚的な統一感を持たせる。
@@ -90,13 +90,13 @@ hero-restaurant.jpg
 
 各画像の役割：
 
--   `hero-hotel.jpg`：ホテル全体・外観
--   `hero-room.jpg`：滞在体験・客室
--   `hero-lounge.jpg`：館内の静けさと高級感
--   `hero-restaurant.jpg`：ホテルサービス・夜のレストラン
+-   `hero-hotel.webp`：ホテル全体・外観
+-   `hero-room.webp`：滞在体験・客室
+-   `hero-lounge.webp`：館内の静けさと高級感
+-   `hero-restaurant.webp`：ホテルサービス・夜のレストラン
 
-Hero専用画像と通常セクション用 `hotel-room.jpg` / `hotel-lounge.jpg` /
-`hotel-restaurant.jpg`
+Hero専用画像と通常セクション用 `hotel-room.webp` / `hotel-lounge.webp` /
+`hotel-restaurant.webp`
 は用途を分ける。Heroでは横長トリミングとコピーを重ねられる余白を優先する。
 
 # 3. 031の同一人物管理
@@ -108,7 +108,7 @@ Hero専用画像と通常セクション用 `hotel-room.jpg` / `hotel-lounge.jpg
 -   首/腕の刺青は確定画像に合わせる
 -   Galleryでは真っ赤な服
 -   Galleryでは大型リストバンド
--   `guest-031.jpg` は内部管理写真
+-   `guest-031.webp` は内部管理写真
 -   undergroundでは同一人物が職員に移送される
 -   truth-research-02では赤いスーツではなく患者/検査着、苦しげで虚ろな表情
 
@@ -116,7 +116,7 @@ CodeXが画像を加工して別人物化しない。
 
 ------------------------------------------------------------------------
 
-# 4. wristband.jpg
+# 4. wristband.webp
 
 既存確定画像を使用。
 
@@ -135,7 +135,7 @@ truthで初めて仕様を回収。
 
 ------------------------------------------------------------------------
 
-# 5. floor-map-normal.png
+# 5. floor-map-normal.webp
 
 通常館内図。
 
@@ -152,7 +152,7 @@ truthで初めて仕様を回収。
 
 ------------------------------------------------------------------------
 
-# 6. floor-map-hidden.png
+# 6. floor-map-hidden.webp
 
 サイト改変後。
 
@@ -170,7 +170,7 @@ truthで初めて仕様を回収。
 
 ------------------------------------------------------------------------
 
-# 7. facility-extension-plan.png
+# 7. facility-extension-plan.webp
 
 2021年内部工事図。
 
@@ -212,7 +212,7 @@ PHASE3までの「秘密のB2がある」という発見を、**031が実際に�
 
 ## 8-3. 写真表示順
 
-### 01 `underground-01.jpg`
+### 01 `underground-01.webp`
 
 10F廊下から職員2名に連れ出される031。
 
@@ -220,7 +220,7 @@ PHASE3までの「秘密のB2がある」という発見を、**031が実際に�
 
 理解：031は自由な宿泊者ではない。
 
-### 02 `underground-02.jpg`
+### 02 `underground-02.webp`
 
 ホテルのバックヤードを職員と移動。
 
@@ -228,13 +228,13 @@ PHASE3までの「秘密のB2がある」という発見を、**031が実際に�
 
 理解：一般客の動線から外れた場所へ移される。
 
-### 03 `underground-03.jpg`
+### 03 `underground-03.webp`
 
 業務用EV前または内部。B2へ向かう。
 
 理解：PHASE2/3で追った業務用EVが実際に使われている。
 
-### 04 `underground-04.jpg`
+### 04 `underground-04.webp`
 
 B2施設内。複数職員に移送される031。
 
@@ -242,7 +242,7 @@ B2施設内。複数職員に移送される031。
 
 理解：本人の意思に反する移送。
 
-### 05 `underground-05.jpg`
+### 05 `underground-05.webp`
 
 処置/実験設備の前。031がさらに強く抵抗。
 
@@ -333,7 +333,7 @@ NESTRAは、身元を隠したい人間を高額で匿う秘密サービスだ�
 
 # 11. truth セクション02｜地下区画増設計画 / 研究部門移管記録
 
-使用：`facility-extension-plan.png` 再掲可。
+使用：`facility-extension-plan.webp` 再掲可。
 
 ## プレイヤーが理解すべきこと
 
@@ -355,7 +355,7 @@ PHASE2/3の「2021年増設」をここで回収。
 
 使用：
 
--   `truth-research-02.jpg`
+-   `truth-research-02.webp`
 -   Gallery写真の小再掲可
 
 ## プレイヤーが理解すべきこと
@@ -382,7 +382,7 @@ Gallery写真を「観察365日目」「観察1,095日目」等の添付資料�
 
 # 13. truth セクション04｜管理端末仕様書
 
-使用：`wristband.jpg`
+使用：`wristband.webp`
 
 ## プレイヤーが理解すべきこと
 
@@ -406,7 +406,7 @@ HTML仕様：
 
 # 14. truth セクション05｜対象者受入基準 改訂履歴
 
-使用：`truth-research-01.jpg`
+使用：`truth-research-01.webp`
 
 ## プレイヤーが理解すべきこと
 
@@ -472,7 +472,7 @@ HTML仕様：
 
 # 16. truth用画像
 
-## truth-research-01.jpg
+## truth-research-01.webp
 
 B2研究施設内部記録。
 
@@ -484,7 +484,7 @@ B2研究施設内部記録。
 
 役割：B2が通常ホテル設備ではなく人体への実験/処置を行う場所であることを補強。
 
-## truth-research-02.jpg
+## truth-research-02.webp
 
 031経過観察記録。
 
