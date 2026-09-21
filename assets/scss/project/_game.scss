@@ -19,7 +19,7 @@
   box-shadow: 0 2px 7px rgba(68, 0, 4, .8);
   clip-path: polygon(1% 16%, 9% 5%, 24% 11%, 40% 3%, 57% 10%, 73% 4%, 91% 13%, 99% 8%, 98% 85%, 83% 93%, 67% 86%, 48% 96%, 31% 88%, 14% 95%, 2% 82%);
 }
-.image-hotspot--b2 { top: 78%; left: 21%; width: 36%; height: 17%; }
+.image-hotspot--b2 { inset: 0; width: auto; height: auto; }
 
 .internal-record,
 .guest-system,

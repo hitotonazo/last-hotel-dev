@@ -1164,10 +1164,9 @@ h1, h2, h3 {
 }
 
 .image-hotspot--b2 {
-  top: 78%;
-  left: 21%;
-  width: 36%;
-  height: 17%;
+  inset: 0;
+  width: auto;
+  height: auto;
 }
 
 .internal-record,
