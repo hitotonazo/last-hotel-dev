@@ -7,7 +7,10 @@
     phase: 'phase0',
     discovered031: false,
     internal031Viewed: false,
+    guestsUnlocked: false,
     discovered10F: false,
+    floor10Unlocked: false,
+    floor10Viewed: false,
     specialGuestsViewed: false,
     discoveredElevator2021: false,
     discoveredRenovation: false,
@@ -25,6 +28,9 @@
       const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY));
       if (!parsed || typeof parsed !== 'object') return { ...INITIAL_STATE };
       const state = { ...INITIAL_STATE, ...parsed };
+      // Keep development-era saves usable without introducing a migration layer.
+      if (state.discovered031) state.guestsUnlocked = true;
+      if (state.discovered10F) state.floor10Unlocked = true;
       return PHASES.includes(state.phase) ? state : { ...INITIAL_STATE };
     } catch {
       return { ...INITIAL_STATE };
@@ -44,9 +50,9 @@
   const stateForPhase = (phase) => {
     const phaseIndex = PHASES.indexOf(phase);
     const state = { ...INITIAL_STATE, phase: phaseIndex >= 0 ? phase : 'phase0' };
-    if (phaseIndex >= 1) Object.assign(state, { discovered031: true, internal031Viewed: true });
-    if (phaseIndex >= 2) state.discovered10F = true;
-    if (phaseIndex >= 3) Object.assign(state, { specialGuestsViewed: true, discoveredElevator2021: true });
+    if (phaseIndex >= 1) Object.assign(state, { discovered031: true, internal031Viewed: true, guestsUnlocked: true });
+    if (phaseIndex >= 2) Object.assign(state, { specialGuestsViewed: true });
+    if (phaseIndex >= 3) Object.assign(state, { discovered10F: true, floor10Unlocked: true, floor10Viewed: true, discoveredElevator2021: true });
     if (phaseIndex >= 4) Object.assign(state, { discoveredRenovation: true, discoveredB2: true, undergroundStep: 1 });
     if (phaseIndex >= 5) Object.assign(state, { undergroundStep: 5, undergroundViewed: true, truthReached: true, truthAlterationPlayed: true });
     if (phaseIndex >= 6) state.endingTriggered = true;
@@ -59,14 +65,14 @@
     const state = readState();
     document.documentElement.dataset.gamePhase = state.phase;
 
-    setHidden(document.querySelector('[data-record-031]'), !state.discovered031 || state.endingTriggered);
-    document.querySelectorAll('[data-discover-031]').forEach((button) => setHidden(button, state.discovered031));
+    document.querySelectorAll('[data-discover-031]').forEach((button) => setHidden(button, state.endingTriggered));
 
     const floorMap = document.querySelector('[data-floor-map]');
     if (floorMap) {
       const hiddenFloor = state.discovered031;
       floorMap.src = hiddenFloor ? 'images/floor-map-hidden.webp' : 'images/floor-map-normal.webp';
-      floorMap.alt = hiddenFloor ? '10階の特別宿泊フロアと2021年増設の業務用エレベーターを含む館内図' : '地下1階から9階までのHOTEL NESTRA館内図';
+      floorMap.alt = hiddenFloor ? '10階部分が黒く塗り潰されたHOTEL NESTRA館内図' : '地下1階から9階までのHOTEL NESTRA館内図';
+      floorMap.closest('.floor-guide__media')?.classList.toggle('is-floor-discovered', state.discovered10F);
     }
     setHidden(document.querySelector('[data-discover-10f]'), !state.discovered031);
     const renovationButton = document.querySelector('[data-discover-renovation]');
@@ -78,8 +84,11 @@
     document.querySelectorAll('[data-underground-granted]').forEach((element) => setHidden(element, !state.discoveredB2));
     document.querySelectorAll('[data-truth-denied]').forEach((element) => setHidden(element, state.truthReached));
     document.querySelectorAll('[data-truth-granted]').forEach((element) => setHidden(element, !state.truthReached));
-    document.querySelectorAll('[data-guests-denied]').forEach((element) => setHidden(element, state.discovered10F));
-    document.querySelectorAll('[data-guests-granted]').forEach((element) => setHidden(element, !state.discovered10F));
+    const guestsUnlocked = state.guestsUnlocked || state.discovered031;
+    document.querySelectorAll('[data-guests-denied]').forEach((element) => setHidden(element, guestsUnlocked));
+    document.querySelectorAll('[data-guests-granted]').forEach((element) => setHidden(element, !guestsUnlocked));
+    document.querySelectorAll('[data-floor10-denied]').forEach((element) => setHidden(element, state.floor10Unlocked));
+    document.querySelectorAll('[data-floor10-granted]').forEach((element) => setHidden(element, !state.floor10Unlocked));
     document.querySelectorAll('[data-guest-031]').forEach((element) => setHidden(element, state.endingTriggered));
     document.querySelectorAll('[data-gallery-031-image]').forEach((image) => {
       const endingSrc = image.dataset.endingSrc;
@@ -89,7 +98,7 @@
     setHidden(document.querySelector('[data-ending-content]'), !state.endingTriggered);
   };
 
-  const discover = ({ button, patch, message, focusTarget, afterEffect }) => {
+  const discover = ({ button, patch, message, focusTarget, afterEffect, applyBeforeEffect = false }) => {
     if (interactionLocked || window.SiteAlteration?.isPlaying()) return;
     interactionLocked = true;
     button.disabled = true;
@@ -97,9 +106,10 @@
       writeState({ ...readState(), ...patch });
       renderProgress();
     };
-    const effect = window.SiteAlteration?.play({ message, onChange: applyChange, focusTarget });
+    if (applyBeforeEffect) applyChange();
+    const effect = window.SiteAlteration?.play({ message, onChange: applyBeforeEffect ? undefined : applyChange, focusTarget });
     if (!effect) {
-      applyChange();
+      if (!applyBeforeEffect) applyChange();
       interactionLocked = false;
       afterEffect?.();
       return;
@@ -110,17 +120,20 @@
   const initGame = () => {
     renderProgress();
     document.querySelectorAll('[data-discover-031]').forEach((button) => button.addEventListener('click', () => {
-      if (readState().discovered031) return;
-      discover({ button, patch: { phase: 'phase1', discovered031: true, internal031Viewed: true }, message: 'サイトが改変されました', focusTarget: document.querySelector('[data-record-031]') });
+      if (readState().discovered031) {
+        window.location.href = 'guests.html';
+        return;
+      }
+      discover({ button, patch: { phase: 'phase1', discovered031: true, internal031Viewed: true, guestsUnlocked: true }, message: 'サイトが改変されました', applyBeforeEffect: true, afterEffect: () => { window.location.href = 'guests.html'; } });
     }));
     document.querySelector('[data-discover-10f]')?.addEventListener('click', (event) => {
       const state = readState();
       if (!state.discovered031) return;
       if (state.discovered10F) {
-        window.location.href = 'guests.html';
+        window.location.href = 'floor-10f.html';
         return;
       }
-      discover({ button: event.currentTarget, patch: { phase: 'phase2', discovered10F: true }, message: 'サイトが改変されました', afterEffect: () => { window.location.href = 'guests.html'; } });
+      discover({ button: event.currentTarget, patch: { phase: 'phase2', discovered10F: true, floor10Unlocked: true }, message: 'サイトが改変されました', applyBeforeEffect: true, afterEffect: () => { window.location.href = 'floor-10f.html'; } });
     });
     document.querySelector('[data-discover-renovation]')?.addEventListener('click', (event) => {
       const state = readState();
@@ -138,14 +151,14 @@
       discover({ button: event.currentTarget, patch: { phase: 'phase4', discoveredB2: true, undergroundStep: 1 }, message: 'サイトが改変されました', afterEffect: () => { window.location.href = 'underground.html'; } });
     });
     const guestsGranted = document.querySelector('[data-guests-granted]');
-    if (guestsGranted && readState().discovered10F && !readState().specialGuestsViewed) {
-      writeState({ ...readState(), specialGuestsViewed: true });
+    if (guestsGranted && (readState().guestsUnlocked || readState().discovered031) && !readState().specialGuestsViewed) {
+      writeState({ ...readState(), phase: 'phase2', specialGuestsViewed: true });
     }
-    document.querySelector('[data-complete-guests]')?.addEventListener('click', (event) => {
-      event.preventDefault();
-      writeState({ ...readState(), phase: 'phase3', specialGuestsViewed: true, discoveredElevator2021: true });
-      window.location.href = 'index.html';
-    });
+    const floor10Granted = document.querySelector('[data-floor10-granted]');
+    if (floor10Granted && readState().floor10Unlocked && !readState().floor10Viewed) {
+      writeState({ ...readState(), phase: 'phase3', floor10Viewed: true, discoveredElevator2021: true });
+      renderProgress();
+    }
     document.querySelector('[data-unlock-truth]')?.addEventListener('click', (event) => {
       const state = readState();
       if (!state.discoveredB2) return;
@@ -234,6 +247,12 @@
         getDetails: () => {
           const state = readState();
           return {
+            discovered031: state.discovered031,
+            guestsUnlocked: state.guestsUnlocked,
+            discovered10F: state.discovered10F,
+            floor10Unlocked: state.floor10Unlocked,
+            floor10Viewed: state.floor10Viewed,
+            discoveredElevator2021: state.discoveredElevator2021,
             discoveredB2: state.discoveredB2,
             undergroundStep: state.undergroundStep,
             undergroundViewed: state.undergroundViewed,

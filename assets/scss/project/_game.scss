@@ -11,6 +11,14 @@
 .image-hotspot--031-2026 { top: 2%; left: 0; width: 18%; height: 94%; }
 .image-hotspot--renovation { inset: 0; width: auto; height: auto; }
 .image-hotspot--floor { top: 13%; left: 4%; width: 60%; height: 13%; }
+.floor-guide__media:not(.is-floor-discovered) .image-hotspot--floor:not([hidden]) {
+  background:
+    radial-gradient(ellipse at 18% 42%, rgba(204, 29, 37, .88) 0 7%, transparent 20%),
+    radial-gradient(ellipse at 76% 64%, rgba(126, 10, 18, .9) 0 8%, transparent 24%),
+    repeating-linear-gradient(7deg, #050505 0 5px, #8f1017 6px 9px, #160305 10px 14px, #030303 15px 20px);
+  box-shadow: 0 2px 7px rgba(68, 0, 4, .8);
+  clip-path: polygon(1% 16%, 9% 5%, 24% 11%, 40% 3%, 57% 10%, 73% 4%, 91% 13%, 99% 8%, 98% 85%, 83% 93%, 67% 86%, 48% 96%, 31% 88%, 14% 95%, 2% 82%);
+}
 .image-hotspot--b2 { top: 78%; left: 21%; width: 36%; height: 17%; }
 
 .internal-record,
@@ -95,6 +103,19 @@
 .access-gate p { color: #aab0aa; }
 
 .internal-page { background: #111512; }
+.floor10-records { min-height: 70vh; padding-block: var(--space-large); color: #d7ddd8; background: linear-gradient(180deg, #171b18, #111512); }
+.floor10-records__header { margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid #485049; }
+.floor10-records__header h1 { margin-bottom: 0; font-family: var(--font-heading-ja); font-size: clamp(30px, 5vw, 52px); }
+.floor10-records__section + .floor10-records__section { margin-top: 64px; }
+.floor10-records__section h2 { margin-bottom: 24px; font-family: var(--font-heading-ja); font-size: clamp(24px, 3.5vw, 36px); }
+.floor10-plan { overflow-x: auto; border: 1px solid #5c625c; background: #e7e4dc; }
+.floor10-plan img { display: block; width: 100%; min-width: 720px; height: auto; }
+.floor10-table-wrap { overflow-x: auto; }
+.floor10-table { width: 100%; min-width: 720px; border-collapse: collapse; color: #d7ddd8; background: #202520; }
+.floor10-table th, .floor10-table td { padding: 14px 16px; border: 1px solid #596059; text-align: left; vertical-align: top; }
+.floor10-table th { color: #b9c0ba; background: #292e29; font-weight: 600; }
+.floor10-table__elevator td { color: #f1cece; background: #641016; border-color: #a33d42; font-weight: 600; }
+.floor10-records__return { margin-top: 48px; text-align: center; }
 .underground-records { min-height: 80vh; padding-block: var(--space-large); color: #d7ddd8; background: linear-gradient(180deg, #111512, #171b18); }
 .underground-records__header { margin-bottom: 64px; padding-bottom: 28px; border-bottom: 1px solid #485049; }
 .underground-records__header h1 { margin-bottom: 28px; font-family: var(--font-heading-ja); font-size: clamp(30px, 5vw, 52px); }
